@@ -1,13 +1,7 @@
-docker run --name my-postgres -d postgres
-#la opción -d permite ejecutar el comando y luego tomar el control de la terminal ya que deja al container trabajando en detached mode
-osea el background.
+start:
+docker-compose up -d
 
-
-docker run -i -t --name postgres8 --volumes path --restart always -e POSTGRES_PASSWORD=admin -e TABLES_NAME=tabla1 -p 6551:5432 -d postgres/latest
-
-
-
-para entrar:
+para entrar (es normal):
 docker exec -it postgres psql -U postgres
   psql:
     $ create database db0             creamos una base de datos llamada db0
